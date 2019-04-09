@@ -1,6 +1,8 @@
 <template>
     <div class="header">
       <router-link  :to="{name:'root'}">
+      <!--to后面如果跟的是路径，就不用动态绑定了-->
+      <!--注意以name获取路由的写法！！！-->
         <img src="../assets/cnodejs_light.svg" alt="">
       </router-link>
       <ul>
@@ -20,9 +22,9 @@
     }
 </script>
 
-<style scoped>       <!--scoped表示style仅对当前组件有效，若不加，对全局有效-->
+<style scoped>       /*scoped表示style仅对当前组件有效，若不加，对全局有效*/
 .header{
-  background-color:#5a5555 ;
+  background-color:#5a5555;
   height: 50px;
 }
 img{

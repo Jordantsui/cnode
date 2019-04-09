@@ -19,6 +19,7 @@ export default new Router({
     {
       name:'post_content',
       path:'/topic/:id&author=:name',       //id是从Postlist.vue传递过来的
+      //为什么是这个路径？？？？
       components:{
         main:Article,
         slidebar:SlideBar              //Article组件和SlideBar组件要同时出现在页面上
@@ -27,6 +28,7 @@ export default new Router({
     {
       name:'user_info',
       path:'/userinfo/:name',         //name是传递过来的参数
+      //同理，为什么是这个路径？？？？
       components:{
         main:UserInfo
       }

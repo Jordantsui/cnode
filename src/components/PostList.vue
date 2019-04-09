@@ -17,15 +17,16 @@
         </div>
       </li>
       <li v-for="post in posts">
+      <!--posts是指20个帖子-->
         <!--头像-->     <!--注意是动态绑定-->
-        <img :src="post.author.avatar_url" alt="">
+        <img :src="post.author.avatar_url" alt="">    <!--img是行内元素-->
         <!--回复/浏览-->
         <span class="allcount">
           <span class="reply_count">{{post.reply_count}}</span>
           /{{post.visit_count}}
         </span>
         <!--帖子的分类-->
-        <!--动态绑定class，有几种分类？？？？-->
+        <!--动态绑定class？？？？？？得看看css的效果-->
         <span :class="[{put_good:(post.good  == true),put_top:(post.top  == true),
         'topiclist-tab':(post.good  != true && post.top  != true)}]">
           <span>
@@ -47,8 +48,9 @@
         </router-link>
         <!--最終回复时间-->
         <span class="last_reply">
-          {{post.last_reply_at | formatDate}}    //表示数据post.last_reply_at经过过滤器formatDate
+          {{post.last_reply_at | formatDate}}    
         </span>
+        <!--表示数据post.last_reply_at经过过滤器formatDate-->
       </li>
       <li>
         <!--分页-->
@@ -86,19 +88,20 @@
             })
               .then(res=>{
                 this.isLoading = false; //加载成功，去除动画
-                this.posts = res.data.data;
+                this.posts = res.data.data;    //注意！！！！
               })
               .catch(function (err) {
                 //处理返回失败后的问题
                 console.log(err)
               })
           },
-        renderList(value){
-          this.postpage = value;
-          this.getData();
-        }
+          renderList(value){
+            this.postpage = value;
+            this.getData();
+          }
       },
       beforeMount(){
+        //注意！！！！！！
         this.isLoading = true;//加载成功之前显示加载动画
         this.getData();//在页面加载之前获取数据  （为什么要加 this？？？？？）
       }

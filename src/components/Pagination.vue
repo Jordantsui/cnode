@@ -27,7 +27,7 @@
       methods:{
         changeBtn(page){
           //点击上一页，下一页,首页
-          if(typeof page != 'number'){       //注意，page.target能定位到按钮
+          if(typeof page != 'number'){       //注意，page.target能定位到按钮元素
             switch(page.target.innerText){
               case '上一页':
                 $('button.currentPage').prev().click();     //currentPage是类名
