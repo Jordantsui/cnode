@@ -1,7 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
+import App from './App.vue'
 import router from './router'    
 //这个文件夹里只有index.js一个文件，而且此文件里未见router？？？？
 //大概可解释为：此文件输出一个对象，而 main.js 将该对象引进，并命名为 router
