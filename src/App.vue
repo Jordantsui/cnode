@@ -11,8 +11,8 @@
 </template>
 
 <script>
-  import Header from './components/Header'
-  import PostList from './components/PostList'
+  import Header from './components/Header.vue'
+  import PostList from './components/PostList.vue'
   //感觉引入 PostList 没什么用啊？？？？
 export default {
   name: 'App',
@@ -23,6 +23,11 @@ export default {
 </script>
 
 <style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 .main{
   width: 80%;
   margin: 0 auto;
